@@ -1,0 +1,35 @@
+<?php
+	if(isset($_GET['regmessage'])
+	{
+		$regerror = $_GET['regmessage'];
+	}
+?>
+<html>
+	<body>
+		<header><strong>Create an Account</strong></header><br/>
+		<br/>
+		<br/>
+		<?php echo"There is an error: $regerror";?>
+		
+		<form action = "RegProcessing.php" method = "POST">
+			First Name:<input type = "text" name = "firstName" id = "firstName" required /><br/>
+			Last Name:<input type ="text" name = "lastName" id = "lastName" required /><br/>
+			Email:(use your meredith address)<input type = "text" name = "email" id = "email" required /><br/>
+			Password:<input type = "password" name = "psd" id = "psd" required /><br/>
+			Confirm Password:<input type = "password" name = "psdC" id = "psdC" required /><br/>
+			About Me:<br/>
+			<textarea name = "aboutMe" id = "aboutMe" rows="4" cols="50">Hi! Welcome to my Page!!!</textarea>
+			<br/>
+			<input type = "submit"/>
+		</form>
+		<style>
+			form, header{
+				margin-left:30%;
+			}
+			input{
+				display:block;
+			}
+		</style>
+	</body>
+	
+</html>
